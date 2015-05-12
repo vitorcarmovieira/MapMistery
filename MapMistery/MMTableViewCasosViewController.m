@@ -7,8 +7,13 @@
 //
 
 #import "MMTableViewCasosViewController.h"
+#import "Caso.h"
+#import "MMCasoStore.h"
 
-@interface MMTableViewCasosViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface MMTableViewCasosViewController () <UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate>
+
+@property (nonatomic, readonly) NSFetchedResultsController *fetchedResultsController;
+@property (weak, nonatomic) IBOutlet UITableView *tableview;
 
 @end
 
@@ -19,9 +24,34 @@
     // Do any additional setup after loading the view.
 }
 
+- (NSFetchedResultsController *)fetchedResultsController {
+    return [[MMCasoStore sharedStore] fetchedResultsController];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    NSLog(@"count: %ld", [[self.fetchedResultsController sections][section] numberOfObjects]);
+    return [[self.fetchedResultsController sections][section] numberOfObjects];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CasoCell"];
+    Caso *caso = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    cell.textLabel.text = caso.nome;
+    
+    return cell;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
+{
+    [self.fetchedResultsController performFetch:nil];
+    [self.tableview reloadData];
 }
 
 /*

@@ -12,14 +12,13 @@
 
 @interface MMCasoStore : NSObject
 
-@property (nonatomic) NSArray *casos;
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 
-+ (instancetype) sharedStore;
++ (instancetype)sharedStore;
 
-- (void) addNewCasoByHistoria:(NSString *)historia andCriminoso:(NSString *)criminoso;
+- (Caso *)createCasoWithNome:(NSString *)nome
+                andHistoria:(NSString *)historia andCriminoso:(NSString *)criminoso;
 
-- (NSArray *) getAllCasos;
-
-- (void) setManagedObjectContext:(NSManagedObjectContext *) managedObjectContext;
+- (BOOL)saveChanges;
 
 @end

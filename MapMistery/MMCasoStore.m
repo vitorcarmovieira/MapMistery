@@ -8,23 +8,27 @@
 
 #import "MMCasoStore.h"
 #import "Caso.h"
+#import "AppDelegate.h"
 @import CoreData;
 
 @interface MMCasoStore ()
 
-@property (nonatomic) NSMutableArray *privateItens;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 @end
 
 @implementation MMCasoStore
 
-+ (instancetype) sharedStore {
-    
+static NSString *DATA_MODEL_ENTITY_NAME = @"Caso";
+
++ (instancetype)sharedStore {
     static MMCasoStore *sharedStore = nil;
     
     if (!sharedStore) {
+        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        
         sharedStore = [[self alloc] initPrivate];
+        sharedStore.managedObjectContext = appDelegate.managedObjectContext;
         
         [sharedStore resetStoredData];
     }
@@ -32,46 +36,22 @@
     return sharedStore;
 }
 
-- (instancetype) initPrivate {
-    
+- (instancetype)initPrivate {
     self = [super init];
     return self;
 }
 
-- (instancetype) init{
-    
-    @throw [NSException exceptionWithName:@"Singleton" reason:@"Use +[BSTimeStore sheredStore]" userInfo:nil];
-    return nil;
-}
-
-- (void) setManagedObjectContext:(NSManagedObjectContext *)managedObjectContext{
-    
-    if (!self.managedObjectContext) {
-        _managedObjectContext = managedObjectContext;
-        [self loadAllCasos];
-    }
-}
-
-- (void)addNewCasoByHistoria:(NSString *)historia andCriminoso:(NSString *)criminoso{
-    
-    Caso *caso = [NSEntityDescription insertNewObjectForEntityForName:@"Caso" inManagedObjectContext:self.managedObjectContext];
-    
-    caso.id = [[[NSUUID alloc] init] UUIDString];
-    caso.historia = historia;
-    caso.criminoso = criminoso;
-    
-    NSError *error;
-    
-    if (![self.managedObjectContext save:&error]) {
-        NSLog(@"Could not save %@, %@", error, error.userInfo);
-    }
+- (instancetype)init {
+    @throw [NSException exceptionWithName:@"Singleton"
+                                   reason:@"Use +[BPDUnidadeFederativaStore sharedStore]"
+                                 userInfo:nil];
 }
 
 - (void)resetStoredData
 {
     
     // Delete all objects
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Caso"];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:DATA_MODEL_ENTITY_NAME];
     NSError *error;
     NSArray *objects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     
@@ -85,29 +65,78 @@
     }
     
     // Populate with defaults
-    [self addNewCasoByHistoria:@"Aqui vem a historia" andCriminoso:@"Nome do criminoso"];
+    [self createCasoWithNome:@"Nome do caso" andHistoria:@"HISTORIA" andCriminoso:@"Nome do Criminoso"];
 }
 
-- (void) loadAllCasos {
+- (Caso *)createCasoWithNome:(NSString *)nome andHistoria:(NSString *)historia andCriminoso:(NSString *)criminoso
+{
+    Caso *caso = [NSEntityDescription
+                                insertNewObjectForEntityForName:DATA_MODEL_ENTITY_NAME
+                                inManagedObjectContext:self.managedObjectContext];
     
-    if (!self.privateItens) {
+    caso.id = [[[NSUUID alloc] init] UUIDString];
+    caso.nome = nome;
+    caso.historia = historia;
+    caso.criminoso = criminoso;
+    
+    NSError *error;
+    
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Could not save %@, %@", error, error.userInfo);
+    }
+    
+    return caso;
+}
+
+- (NSFetchedResultsController *)fetchedResultsController
+{
+    if (!_fetchedResultsController) {
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
         
-        NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Caso"];
-        NSError *error;
+        NSEntityDescription *entity = [NSEntityDescription entityForName:DATA_MODEL_ENTITY_NAME inManagedObjectContext:self.managedObjectContext];
         
-        NSArray *result = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+        [fetchRequest setEntity:entity];
         
-        if (!result) {
-            [NSException raise:@"fetch failed" format:@"Reason: %@", [error localizedDescription]];
+        // Set the batch size to a suitable number.
+        [fetchRequest setFetchBatchSize:20];
+        
+        // Edit the sort key as appropriate.
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"nome" ascending:YES];
+        NSArray *sortDescriptors = @[sortDescriptor];
+        
+        [fetchRequest setSortDescriptors:sortDescriptors];
+        
+        // Edit the section name key path and cache name if appropriate.
+        // nil for section name key path means "no sections".
+        _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+        // _fetchedResultsController.delegate = self;
+        
+        NSError *error = nil;
+        if (![_fetchedResultsController performFetch:&error]) {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+    }
+    
+    return _fetchedResultsController;
+}
+
+- (BOOL)saveChanges {
+    NSError *error;
+    
+    if ([self.managedObjectContext hasChanges]) {
+        BOOL successful = [self.managedObjectContext save:&error];
+        
+        if (!successful) {
+            NSLog(@"Error saving: %@", [error localizedDescription]);
         }
         
-        self.privateItens = [NSMutableArray arrayWithArray:result];
+        return successful;
     }
-}
-
-- (NSArray *) getAllContacts{
     
-    return [self.privateItens copy];
+    return YES;
 }
 
 @end

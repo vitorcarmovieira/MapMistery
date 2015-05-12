@@ -18,10 +18,10 @@
 		4E2ECA9C1B0191D700125C93 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2ECA9B1B0191D700125C93 /* MapKit.framework */; };
 		4E2ECA9F1B01926D00125C93 /* MMMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECA9E1B01926D00125C93 /* MMMapViewController.m */; };
 		4E2ECAA81B019C1B00125C93 /* Personagem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAA71B019C1B00125C93 /* Personagem.m */; };
-		4E2ECAAB1B019C7300125C93 /* Caso.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAAA1B019C7300125C93 /* Caso.m */; };
 		4E2ECAAE1B019C7400125C93 /* Local.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAAD1B019C7400125C93 /* Local.m */; };
 		4E2ECAB21B01A2C700125C93 /* MMCasoStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAB11B01A2C700125C93 /* MMCasoStore.m */; };
 		4E2ECAB51B01A8D600125C93 /* MMTableViewCasosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAB41B01A8D600125C93 /* MMTableViewCasosViewController.m */; };
+		4E2ECAB91B01BA3400125C93 /* Caso.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAB81B01BA3400125C93 /* Caso.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,14 +54,14 @@
 		4E2ECA9E1B01926D00125C93 /* MMMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMapViewController.m; sourceTree = "<group>"; };
 		4E2ECAA61B019C1B00125C93 /* Personagem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Personagem.h; sourceTree = "<group>"; };
 		4E2ECAA71B019C1B00125C93 /* Personagem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Personagem.m; sourceTree = "<group>"; };
-		4E2ECAA91B019C7300125C93 /* Caso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Caso.h; sourceTree = "<group>"; };
-		4E2ECAAA1B019C7300125C93 /* Caso.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Caso.m; sourceTree = "<group>"; };
 		4E2ECAAC1B019C7400125C93 /* Local.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Local.h; sourceTree = "<group>"; };
 		4E2ECAAD1B019C7400125C93 /* Local.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Local.m; sourceTree = "<group>"; };
 		4E2ECAB01B01A2C700125C93 /* MMCasoStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCasoStore.h; sourceTree = "<group>"; };
 		4E2ECAB11B01A2C700125C93 /* MMCasoStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCasoStore.m; sourceTree = "<group>"; };
 		4E2ECAB31B01A8D600125C93 /* MMTableViewCasosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTableViewCasosViewController.h; sourceTree = "<group>"; };
 		4E2ECAB41B01A8D600125C93 /* MMTableViewCasosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTableViewCasosViewController.m; sourceTree = "<group>"; };
+		4E2ECAB71B01BA3400125C93 /* Caso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Caso.h; sourceTree = "<group>"; };
+		4E2ECAB81B01BA3400125C93 /* Caso.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Caso.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,8 +149,8 @@
 			children = (
 				4E2ECAAC1B019C7400125C93 /* Local.h */,
 				4E2ECAAD1B019C7400125C93 /* Local.m */,
-				4E2ECAA91B019C7300125C93 /* Caso.h */,
-				4E2ECAAA1B019C7300125C93 /* Caso.m */,
+				4E2ECAB71B01BA3400125C93 /* Caso.h */,
+				4E2ECAB81B01BA3400125C93 /* Caso.m */,
 				4E2ECAA61B019C1B00125C93 /* Personagem.h */,
 				4E2ECAA71B019C1B00125C93 /* Personagem.m */,
 				4E2ECAB01B01A2C700125C93 /* MMCasoStore.h */,
@@ -272,12 +272,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E2ECAAB1B019C7300125C93 /* Caso.m in Sources */,
 				4E2ECA7B1B018A1300125C93 /* MapMistery.xcdatamodeld in Sources */,
 				4E2ECA781B018A1300125C93 /* AppDelegate.m in Sources */,
 				4E2ECA9F1B01926D00125C93 /* MMMapViewController.m in Sources */,
 				4E2ECA7E1B018A1300125C93 /* ViewController.m in Sources */,
 				4E2ECAAE1B019C7400125C93 /* Local.m in Sources */,
+				4E2ECAB91B01BA3400125C93 /* Caso.m in Sources */,
 				4E2ECAA81B019C1B00125C93 /* Personagem.m in Sources */,
 				4E2ECA751B018A1300125C93 /* main.m in Sources */,
 				4E2ECAB51B01A8D600125C93 /* MMTableViewCasosViewController.m in Sources */,
@@ -478,6 +478,7 @@
 				4E2ECA971B018A1300125C93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E2ECA981B018A1300125C93 /* Build configuration list for PBXNativeTarget "MapMisteryTests" */ = {
 			isa = XCConfigurationList;
@@ -486,6 +487,7 @@
 				4E2ECA9A1B018A1300125C93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
