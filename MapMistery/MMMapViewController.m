@@ -7,6 +7,9 @@
 //
 
 #import "MMMapViewController.h"
+#import "MMLocalStore.h"
+#import "Local.h"
+#import "MMCustomAnnotation.h"
 @import MapKit;
 @import CoreLocation;
 
@@ -64,14 +67,50 @@
             
             for(MKMapItem *mapItem in response.mapItems){
                 
-                MKPointAnnotation *point = [MKPointAnnotation new];
-                point.coordinate = mapItem.placemark.coordinate;
-                point.title = mapItem.name;
-                [self.map addAnnotation:point];
-                NSLog(@"Nome: %@\nRua: %@", mapItem.name, mapItem.placemark.thoroughfare);
+//                MKPointAnnotation *point = [MKPointAnnotation new];
+//                point.coordinate = mapItem.placemark.coordinate;
+//                point.title = mapItem.name;
+//                [self.map addAnnotation:point];
+//                NSLog(@"Nome: %@\nRua: %@", mapItem.name, mapItem.placemark.thoroughfare);
+                MMCustomAnnotation *customAnnotation = [[MMCustomAnnotation alloc] initWithTitle:mapItem.name andCoordinate:mapItem.placemark.coordinate];
+                [self.map addAnnotation:customAnnotation];
             }
         }
     }];
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
+    
+    if ([annotation isKindOfClass:[MMCustomAnnotation class]]) {
+        
+        MMCustomAnnotation *customAnnotation = (MMCustomAnnotation *) annotation;
+        MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"CustomAnnotation"];
+        if (annotationView == nil) {
+            
+            annotationView = customAnnotation.annotationView;
+        } else {
+            
+            annotationView.annotation = annotation;
+        }
+        
+        return annotationView;
+    } else {
+        
+        return nil;
+    }
+}
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view{
+    
+    Local *local;
+    CLLocationCoordinate2D coord = [view.annotation coordinate];
+    local.latitude = [NSNumber numberWithDouble:coord.latitude];
+    local.longitude = [NSNumber numberWithDouble:coord.longitude];
+    MKPointAnnotation *currentAnnotation = view.annotation;
+    local.title = currentAnnotation.title;
+    
+    [[MMLocalStore sharedStore] createLocalWithLatitude:local.latitude andLongitude:local.longitude andTitle:local.title andTipo:@"null"];
+    [[MMLocalStore sharedStore] saveChanges];
 }
 
 - (void)didReceiveMemoryWarning {

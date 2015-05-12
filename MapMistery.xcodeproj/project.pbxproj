@@ -18,10 +18,14 @@
 		4E2ECA9C1B0191D700125C93 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2ECA9B1B0191D700125C93 /* MapKit.framework */; };
 		4E2ECA9F1B01926D00125C93 /* MMMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECA9E1B01926D00125C93 /* MMMapViewController.m */; };
 		4E2ECAA81B019C1B00125C93 /* Personagem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAA71B019C1B00125C93 /* Personagem.m */; };
-		4E2ECAAE1B019C7400125C93 /* Local.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAAD1B019C7400125C93 /* Local.m */; };
 		4E2ECAB21B01A2C700125C93 /* MMCasoStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAB11B01A2C700125C93 /* MMCasoStore.m */; };
 		4E2ECAB51B01A8D600125C93 /* MMTableViewCasosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAB41B01A8D600125C93 /* MMTableViewCasosViewController.m */; };
 		4E2ECAB91B01BA3400125C93 /* Caso.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAB81B01BA3400125C93 /* Caso.m */; };
+		4E2ECABC1B01C99000125C93 /* MMLocalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECABB1B01C99000125C93 /* MMLocalStore.m */; };
+		4E2ECAC21B01D10100125C93 /* Local.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAC11B01D10100125C93 /* Local.m */; };
+		4E2ECAC51B01E47C00125C93 /* MMTableViewSuspeitosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAC41B01E47C00125C93 /* MMTableViewSuspeitosViewController.m */; };
+		4E2ECAC81B023EA000125C93 /* MMCustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAC71B023EA000125C93 /* MMCustomAnnotation.m */; };
+		4E2ECACA1B0244A000125C93 /* teste.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E2ECAC91B0244A000125C93 /* teste.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,14 +58,21 @@
 		4E2ECA9E1B01926D00125C93 /* MMMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMapViewController.m; sourceTree = "<group>"; };
 		4E2ECAA61B019C1B00125C93 /* Personagem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Personagem.h; sourceTree = "<group>"; };
 		4E2ECAA71B019C1B00125C93 /* Personagem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Personagem.m; sourceTree = "<group>"; };
-		4E2ECAAC1B019C7400125C93 /* Local.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Local.h; sourceTree = "<group>"; };
-		4E2ECAAD1B019C7400125C93 /* Local.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Local.m; sourceTree = "<group>"; };
 		4E2ECAB01B01A2C700125C93 /* MMCasoStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCasoStore.h; sourceTree = "<group>"; };
 		4E2ECAB11B01A2C700125C93 /* MMCasoStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCasoStore.m; sourceTree = "<group>"; };
 		4E2ECAB31B01A8D600125C93 /* MMTableViewCasosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTableViewCasosViewController.h; sourceTree = "<group>"; };
 		4E2ECAB41B01A8D600125C93 /* MMTableViewCasosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTableViewCasosViewController.m; sourceTree = "<group>"; };
 		4E2ECAB71B01BA3400125C93 /* Caso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Caso.h; sourceTree = "<group>"; };
 		4E2ECAB81B01BA3400125C93 /* Caso.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Caso.m; sourceTree = "<group>"; };
+		4E2ECABA1B01C99000125C93 /* MMLocalStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLocalStore.h; sourceTree = "<group>"; };
+		4E2ECABB1B01C99000125C93 /* MMLocalStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLocalStore.m; sourceTree = "<group>"; };
+		4E2ECAC01B01D10100125C93 /* Local.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Local.h; sourceTree = "<group>"; };
+		4E2ECAC11B01D10100125C93 /* Local.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Local.m; sourceTree = "<group>"; };
+		4E2ECAC31B01E47C00125C93 /* MMTableViewSuspeitosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTableViewSuspeitosViewController.h; sourceTree = "<group>"; };
+		4E2ECAC41B01E47C00125C93 /* MMTableViewSuspeitosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTableViewSuspeitosViewController.m; sourceTree = "<group>"; };
+		4E2ECAC61B023EA000125C93 /* MMCustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCustomAnnotation.h; sourceTree = "<group>"; };
+		4E2ECAC71B023EA000125C93 /* MMCustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCustomAnnotation.m; sourceTree = "<group>"; };
+		4E2ECAC91B0244A000125C93 /* teste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teste.png; path = "../../../../SharePlan/Pontos Mapa/teste.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +116,15 @@
 		4E2ECA711B018A1300125C93 /* MapMistery */ = {
 			isa = PBXGroup;
 			children = (
+				4E2ECAC61B023EA000125C93 /* MMCustomAnnotation.h */,
+				4E2ECAC71B023EA000125C93 /* MMCustomAnnotation.m */,
 				4E2ECAB61B01A8FD00125C93 /* Controller */,
 				4E2ECAAF1B019C8800125C93 /* Model */,
 				4E2ECA761B018A1300125C93 /* AppDelegate.h */,
 				4E2ECA771B018A1300125C93 /* AppDelegate.m */,
 				4E2ECA7F1B018A1300125C93 /* Main.storyboard */,
 				4E2ECA821B018A1300125C93 /* Images.xcassets */,
+				4E2ECAC91B0244A000125C93 /* teste.png */,
 				4E2ECA841B018A1300125C93 /* LaunchScreen.xib */,
 				4E2ECA791B018A1300125C93 /* MapMistery.xcdatamodeld */,
 				4E2ECA721B018A1300125C93 /* Supporting Files */,
@@ -147,14 +161,16 @@
 		4E2ECAAF1B019C8800125C93 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4E2ECAAC1B019C7400125C93 /* Local.h */,
-				4E2ECAAD1B019C7400125C93 /* Local.m */,
+				4E2ECAC01B01D10100125C93 /* Local.h */,
+				4E2ECAC11B01D10100125C93 /* Local.m */,
 				4E2ECAB71B01BA3400125C93 /* Caso.h */,
 				4E2ECAB81B01BA3400125C93 /* Caso.m */,
 				4E2ECAA61B019C1B00125C93 /* Personagem.h */,
 				4E2ECAA71B019C1B00125C93 /* Personagem.m */,
 				4E2ECAB01B01A2C700125C93 /* MMCasoStore.h */,
 				4E2ECAB11B01A2C700125C93 /* MMCasoStore.m */,
+				4E2ECABA1B01C99000125C93 /* MMLocalStore.h */,
+				4E2ECABB1B01C99000125C93 /* MMLocalStore.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -168,6 +184,8 @@
 				4E2ECA9E1B01926D00125C93 /* MMMapViewController.m */,
 				4E2ECAB31B01A8D600125C93 /* MMTableViewCasosViewController.h */,
 				4E2ECAB41B01A8D600125C93 /* MMTableViewCasosViewController.m */,
+				4E2ECAC31B01E47C00125C93 /* MMTableViewSuspeitosViewController.h */,
+				4E2ECAC41B01E47C00125C93 /* MMTableViewSuspeitosViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -254,6 +272,7 @@
 			files = (
 				4E2ECA811B018A1300125C93 /* Main.storyboard in Resources */,
 				4E2ECA861B018A1300125C93 /* LaunchScreen.xib in Resources */,
+				4E2ECACA1B0244A000125C93 /* teste.png in Resources */,
 				4E2ECA831B018A1300125C93 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,13 +293,16 @@
 			files = (
 				4E2ECA7B1B018A1300125C93 /* MapMistery.xcdatamodeld in Sources */,
 				4E2ECA781B018A1300125C93 /* AppDelegate.m in Sources */,
+				4E2ECAC51B01E47C00125C93 /* MMTableViewSuspeitosViewController.m in Sources */,
 				4E2ECA9F1B01926D00125C93 /* MMMapViewController.m in Sources */,
 				4E2ECA7E1B018A1300125C93 /* ViewController.m in Sources */,
-				4E2ECAAE1B019C7400125C93 /* Local.m in Sources */,
 				4E2ECAB91B01BA3400125C93 /* Caso.m in Sources */,
 				4E2ECAA81B019C1B00125C93 /* Personagem.m in Sources */,
 				4E2ECA751B018A1300125C93 /* main.m in Sources */,
 				4E2ECAB51B01A8D600125C93 /* MMTableViewCasosViewController.m in Sources */,
+				4E2ECAC21B01D10100125C93 /* Local.m in Sources */,
+				4E2ECAC81B023EA000125C93 /* MMCustomAnnotation.m in Sources */,
+				4E2ECABC1B01C99000125C93 /* MMLocalStore.m in Sources */,
 				4E2ECAB21B01A2C700125C93 /* MMCasoStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,28 +1,28 @@
 //
-//  MMCasoStore.m
+//  MMLocalStore.m
 //  MapMistery
 //
-//  Created by Vitor on 5/11/15.
+//  Created by Vitor on 5/12/15.
 //  Copyright (c) 2015 BEPID. All rights reserved.
 //
 
-#import "MMCasoStore.h"
-#import "Caso.h"
+#import "MMLocalStore.h"
+#import "Local.h"
 #import "AppDelegate.h"
 @import CoreData;
 
-@interface MMCasoStore ()
+@interface MMLocalStore ()
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 @end
 
-@implementation MMCasoStore
+@implementation MMLocalStore
 
-static NSString *DATA_MODEL_ENTITY_NAME = @"Caso";
+static NSString *DATA_MODEL_ENTITY_NAME = @"Local";
 
 + (instancetype)sharedStore {
-    static MMCasoStore *sharedStore = nil;
+    static MMLocalStore *sharedStore = nil;
     
     if (!sharedStore) {
         AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
@@ -30,7 +30,7 @@ static NSString *DATA_MODEL_ENTITY_NAME = @"Caso";
         sharedStore = [[self alloc] initPrivate];
         sharedStore.managedObjectContext = appDelegate.managedObjectContext;
         
-//        [sharedStore resetStoredData];
+        //        [sharedStore resetStoredData];
     }
     
     return sharedStore;
@@ -65,19 +65,19 @@ static NSString *DATA_MODEL_ENTITY_NAME = @"Caso";
     }
     
     // Populate with defaults
-    [self createCasoWithNome:@"Nome do caso" andHistoria:@"HISTORIA" andCriminoso:@"Nome do Criminoso"];
 }
 
-- (Caso *)createCasoWithNome:(NSString *)nome andHistoria:(NSString *)historia andCriminoso:(NSString *)criminoso
+- (Local *)createLocalWithLatitude:(NSNumber*)latitude andLongitude:(NSNumber*)longitude andTitle:(NSString *)title andTipo:(NSString *)tipo
 {
-    Caso *caso = [NSEntityDescription
-                                insertNewObjectForEntityForName:DATA_MODEL_ENTITY_NAME
-                                inManagedObjectContext:self.managedObjectContext];
+    Local *local = [NSEntityDescription
+                  insertNewObjectForEntityForName:DATA_MODEL_ENTITY_NAME
+                  inManagedObjectContext:self.managedObjectContext];
     
-    caso.id = [[[NSUUID alloc] init] UUIDString];
-    caso.nome = nome;
-    caso.historia = historia;
-    caso.criminoso = criminoso;
+    local.id = [[[NSUUID alloc] init] UUIDString];
+    local.tipo = tipo;
+    local.title = title;
+    local.latitude = latitude;
+    local.longitude = longitude;
     
     NSError *error;
     
@@ -85,7 +85,7 @@ static NSString *DATA_MODEL_ENTITY_NAME = @"Caso";
         NSLog(@"Could not save %@, %@", error, error.userInfo);
     }
     
-    return caso;
+    return local;
 }
 
 - (NSFetchedResultsController *)fetchedResultsController
@@ -101,7 +101,7 @@ static NSString *DATA_MODEL_ENTITY_NAME = @"Caso";
         [fetchRequest setFetchBatchSize:20];
         
         // Edit the sort key as appropriate.
-        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"nome" ascending:YES];
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES];
         NSArray *sortDescriptors = @[sortDescriptor];
         
         [fetchRequest setSortDescriptors:sortDescriptors];

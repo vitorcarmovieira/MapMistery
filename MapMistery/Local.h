@@ -2,7 +2,7 @@
 //  Local.h
 //  MapMistery
 //
-//  Created by Vitor on 5/11/15.
+//  Created by Vitor on 5/12/15.
 //  Copyright (c) 2015 BEPID. All rights reserved.
 //
 
@@ -12,8 +12,11 @@
 
 @interface Local : NSManagedObject
 
-@property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSString * id;
 @property (nonatomic, retain) id image;
 @property (nonatomic, retain) NSString * tipo;
+@property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSNumber * longitude;
+@property (nonatomic, retain) NSNumber * latitude;
 
 @end
