@@ -17,6 +17,9 @@
 		4E2ECA921B018A1300125C93 /* MapMisteryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECA911B018A1300125C93 /* MapMisteryTests.m */; };
 		4E2ECA9C1B0191D700125C93 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2ECA9B1B0191D700125C93 /* MapKit.framework */; };
 		4E2ECA9F1B01926D00125C93 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECA9E1B01926D00125C93 /* MapViewController.m */; };
+		4E2ECAA81B019C1B00125C93 /* Personagem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAA71B019C1B00125C93 /* Personagem.m */; };
+		4E2ECAAB1B019C7300125C93 /* Caso.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAAA1B019C7300125C93 /* Caso.m */; };
+		4E2ECAAE1B019C7400125C93 /* Local.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAAD1B019C7400125C93 /* Local.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,12 @@
 		4E2ECA9B1B0191D700125C93 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4E2ECA9D1B01926D00125C93 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		4E2ECA9E1B01926D00125C93 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		4E2ECAA61B019C1B00125C93 /* Personagem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Personagem.h; sourceTree = "<group>"; };
+		4E2ECAA71B019C1B00125C93 /* Personagem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Personagem.m; sourceTree = "<group>"; };
+		4E2ECAA91B019C7300125C93 /* Caso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Caso.h; sourceTree = "<group>"; };
+		4E2ECAAA1B019C7300125C93 /* Caso.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Caso.m; sourceTree = "<group>"; };
+		4E2ECAAC1B019C7400125C93 /* Local.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Local.h; sourceTree = "<group>"; };
+		4E2ECAAD1B019C7400125C93 /* Local.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Local.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +99,7 @@
 		4E2ECA711B018A1300125C93 /* MapMistery */ = {
 			isa = PBXGroup;
 			children = (
+				4E2ECAAF1B019C8800125C93 /* Model */,
 				4E2ECA761B018A1300125C93 /* AppDelegate.h */,
 				4E2ECA771B018A1300125C93 /* AppDelegate.m */,
 				4E2ECA7C1B018A1300125C93 /* ViewController.h */,
@@ -129,6 +139,19 @@
 				4E2ECA901B018A1300125C93 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4E2ECAAF1B019C8800125C93 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E2ECAAC1B019C7400125C93 /* Local.h */,
+				4E2ECAAD1B019C7400125C93 /* Local.m */,
+				4E2ECAA91B019C7300125C93 /* Caso.h */,
+				4E2ECAAA1B019C7300125C93 /* Caso.m */,
+				4E2ECAA61B019C1B00125C93 /* Personagem.h */,
+				4E2ECAA71B019C1B00125C93 /* Personagem.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,10 +254,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E2ECAAB1B019C7300125C93 /* Caso.m in Sources */,
 				4E2ECA7B1B018A1300125C93 /* MapMistery.xcdatamodeld in Sources */,
 				4E2ECA781B018A1300125C93 /* AppDelegate.m in Sources */,
 				4E2ECA9F1B01926D00125C93 /* MapViewController.m in Sources */,
 				4E2ECA7E1B018A1300125C93 /* ViewController.m in Sources */,
+				4E2ECAAE1B019C7400125C93 /* Local.m in Sources */,
+				4E2ECAA81B019C1B00125C93 /* Personagem.m in Sources */,
 				4E2ECA751B018A1300125C93 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
