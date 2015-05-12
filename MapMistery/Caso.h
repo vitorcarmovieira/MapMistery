@@ -14,5 +14,6 @@
 
 @property (nonatomic, retain) NSString * historia;
 @property (nonatomic, retain) NSString * criminoso;
+@property (nonatomic, retain) NSString * id;
 
 @end

@@ -1,5 +1,5 @@
 //
-//  MapViewController.h
+//  MMTableViewCasosViewController.h
 //  MapMistery
 //
 //  Created by Vitor on 5/11/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MapViewController : UIViewController
+@interface MMTableViewCasosViewController : UIViewController
 
 @end

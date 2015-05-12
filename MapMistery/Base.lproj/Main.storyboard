@@ -151,7 +151,7 @@
         <!--Mapa-->
         <scene sceneID="u7O-1a-Z5R">
             <objects>
-                <viewController id="4i6-0u-6aP" customClass="MapViewController" sceneMemberID="viewController">
+                <viewController id="4i6-0u-6aP" customClass="MMMapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="34S-2t-xLP"/>
                         <viewControllerLayoutGuide type="bottom" id="PpS-Fw-pRR"/>

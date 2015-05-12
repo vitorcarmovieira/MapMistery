@@ -1,18 +1,13 @@
 //
-//  Caso.m
+//  MapViewController.h
 //  MapMistery
 //
 //  Created by Vitor on 5/11/15.
 //  Copyright (c) 2015 BEPID. All rights reserved.
 //
 
-#import "Caso.h"
+#import <UIKit/UIKit.h>
 
-
-@implementation Caso
-
-@dynamic historia;
-@dynamic criminoso;
-@dynamic id;
+@interface MMMapViewController : UIViewController
 
 @end

@@ -6,11 +6,11 @@
 //  Copyright (c) 2015 BEPID. All rights reserved.
 //
 
-#import "MapViewController.h"
+#import "MMMapViewController.h"
 @import MapKit;
 @import CoreLocation;
 
-@interface MapViewController () <MKMapViewDelegate>
+@interface MMMapViewController () <MKMapViewDelegate>
 
 @property (nonatomic) CLLocationManager *locationManager;
 @property (nonatomic) MKLocalSearchRequest *localSearchRequest;
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation MapViewController
+@implementation MMMapViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

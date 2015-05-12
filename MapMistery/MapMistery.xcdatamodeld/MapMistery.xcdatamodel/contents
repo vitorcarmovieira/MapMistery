@@ -3,8 +3,10 @@
     <entity name="Caso" representedClassName="Caso" syncable="YES">
         <attribute name="criminoso" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="historia" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Local" representedClassName="Local" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="tipo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
@@ -17,7 +19,7 @@
     </entity>
     <elements>
         <element name="Personagem" positionX="-54" positionY="-9" width="128" height="105"/>
-        <element name="Local" positionX="-36" positionY="36" width="128" height="90"/>
-        <element name="Caso" positionX="-18" positionY="63" width="128" height="75"/>
+        <element name="Local" positionX="-36" positionY="36" width="128" height="105"/>
+        <element name="Caso" positionX="-18" positionY="63" width="128" height="90"/>
     </elements>
 </model>
