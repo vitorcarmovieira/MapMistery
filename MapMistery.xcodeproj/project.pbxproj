@@ -15,6 +15,8 @@
 		4E2ECA831B018A1300125C93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E2ECA821B018A1300125C93 /* Images.xcassets */; };
 		4E2ECA861B018A1300125C93 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2ECA841B018A1300125C93 /* LaunchScreen.xib */; };
 		4E2ECA921B018A1300125C93 /* MapMisteryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECA911B018A1300125C93 /* MapMisteryTests.m */; };
+		4E2ECA9C1B0191D700125C93 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2ECA9B1B0191D700125C93 /* MapKit.framework */; };
+		4E2ECA9F1B01926D00125C93 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECA9E1B01926D00125C93 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,9 @@
 		4E2ECA8B1B018A1300125C93 /* MapMisteryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapMisteryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E2ECA901B018A1300125C93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E2ECA911B018A1300125C93 /* MapMisteryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapMisteryTests.m; sourceTree = "<group>"; };
+		4E2ECA9B1B0191D700125C93 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4E2ECA9D1B01926D00125C93 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		4E2ECA9E1B01926D00125C93 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E2ECA9C1B0191D700125C93 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +71,7 @@
 		4E2ECA661B018A1300125C93 = {
 			isa = PBXGroup;
 			children = (
+				4E2ECA9B1B0191D700125C93 /* MapKit.framework */,
 				4E2ECA711B018A1300125C93 /* MapMistery */,
 				4E2ECA8E1B018A1300125C93 /* MapMisteryTests */,
 				4E2ECA701B018A1300125C93 /* Products */,
@@ -87,6 +94,8 @@
 				4E2ECA771B018A1300125C93 /* AppDelegate.m */,
 				4E2ECA7C1B018A1300125C93 /* ViewController.h */,
 				4E2ECA7D1B018A1300125C93 /* ViewController.m */,
+				4E2ECA9D1B01926D00125C93 /* MapViewController.h */,
+				4E2ECA9E1B01926D00125C93 /* MapViewController.m */,
 				4E2ECA7F1B018A1300125C93 /* Main.storyboard */,
 				4E2ECA821B018A1300125C93 /* Images.xcassets */,
 				4E2ECA841B018A1300125C93 /* LaunchScreen.xib */,
@@ -224,6 +233,7 @@
 			files = (
 				4E2ECA7B1B018A1300125C93 /* MapMistery.xcdatamodeld in Sources */,
 				4E2ECA781B018A1300125C93 /* AppDelegate.m in Sources */,
+				4E2ECA9F1B01926D00125C93 /* MapViewController.m in Sources */,
 				4E2ECA7E1B018A1300125C93 /* ViewController.m in Sources */,
 				4E2ECA751B018A1300125C93 /* main.m in Sources */,
 			);
