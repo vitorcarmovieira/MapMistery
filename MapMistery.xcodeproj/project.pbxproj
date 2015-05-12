@@ -26,6 +26,7 @@
 		4E2ECAC81B023EA000125C93 /* MMCustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAC71B023EA000125C93 /* MMCustomAnnotation.m */; };
 		4E2ECACC1B024DBF00125C93 /* teste.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E2ECACB1B024DBF00125C93 /* teste.png */; };
 		4E2ECACF1B027C9D00125C93 /* Local.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECACE1B027C9D00125C93 /* Local.m */; };
+		4E2ECAD51B029AE100125C93 /* MMPersonagemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAD41B029AE100125C93 /* MMPersonagemStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		4E2ECACB1B024DBF00125C93 /* teste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teste.png; path = "../../../../SharePlan/Pontos Mapa - tamanho reduzido/teste.png"; sourceTree = "<group>"; };
 		4E2ECACD1B027C9D00125C93 /* Local.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Local.h; sourceTree = "<group>"; };
 		4E2ECACE1B027C9D00125C93 /* Local.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Local.m; sourceTree = "<group>"; };
+		4E2ECAD31B029AE100125C93 /* MMPersonagemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPersonagemStore.h; sourceTree = "<group>"; };
+		4E2ECAD41B029AE100125C93 /* MMPersonagemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMPersonagemStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +170,8 @@
 				4E2ECAB81B01BA3400125C93 /* Caso.m */,
 				4E2ECAA61B019C1B00125C93 /* Personagem.h */,
 				4E2ECAA71B019C1B00125C93 /* Personagem.m */,
+				4E2ECAD31B029AE100125C93 /* MMPersonagemStore.h */,
+				4E2ECAD41B029AE100125C93 /* MMPersonagemStore.m */,
 				4E2ECAB01B01A2C700125C93 /* MMCasoStore.h */,
 				4E2ECAB11B01A2C700125C93 /* MMCasoStore.m */,
 				4E2ECABA1B01C99000125C93 /* MMLocalStore.h */,
@@ -295,6 +300,7 @@
 				4E2ECA781B018A1300125C93 /* AppDelegate.m in Sources */,
 				4E2ECAC51B01E47C00125C93 /* MMTableViewSuspeitosViewController.m in Sources */,
 				4E2ECA9F1B01926D00125C93 /* MMMapViewController.m in Sources */,
+				4E2ECAD51B029AE100125C93 /* MMPersonagemStore.m in Sources */,
 				4E2ECA7E1B018A1300125C93 /* ViewController.m in Sources */,
 				4E2ECAB91B01BA3400125C93 /* Caso.m in Sources */,
 				4E2ECAA81B019C1B00125C93 /* Personagem.m in Sources */,
