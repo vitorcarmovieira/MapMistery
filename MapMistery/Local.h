@@ -14,9 +14,9 @@
 
 @property (nonatomic, retain) NSString * id;
 @property (nonatomic, retain) id image;
+@property (nonatomic, retain) NSString * latitude;
+@property (nonatomic, retain) NSString * longitude;
 @property (nonatomic, retain) NSString * tipo;
 @property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) NSNumber * longitude;
-@property (nonatomic, retain) NSNumber * latitude;
 
 @end

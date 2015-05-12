@@ -28,6 +28,9 @@
     annotationView.canShowCallout = YES;
     annotationView.image = [UIImage imageNamed:@"teste.png"];
     annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    imageView.image = [UIImage imageNamed:@"teste.png"];
+    annotationView.leftCalloutAccessoryView = imageView;
     
     return annotationView;
 }

@@ -13,9 +13,9 @@
 
 @dynamic id;
 @dynamic image;
+@dynamic latitude;
+@dynamic longitude;
 @dynamic tipo;
 @dynamic title;
-@dynamic longitude;
-@dynamic latitude;
 
 @end

@@ -13,12 +13,13 @@
 @import MapKit;
 @import CoreLocation;
 
-@interface MMMapViewController () <MKMapViewDelegate>
+@interface MMMapViewController () <MKMapViewDelegate, NSFetchedResultsControllerDelegate>
 
 @property (nonatomic) CLLocationManager *locationManager;
 @property (nonatomic) MKLocalSearchRequest *localSearchRequest;
 @property (nonatomic) MKLocalSearch *localSearch;
 @property (weak, nonatomic) IBOutlet MKMapView *map;
+@property (nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end
 
@@ -100,17 +101,25 @@
     }
 }
 
+- (NSFetchedResultsController *)fetchedResultsController {
+    return [[MMLocalStore sharedStore] fetchedResultsController];
+}
+
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view{
     
-    Local *local;
     CLLocationCoordinate2D coord = [view.annotation coordinate];
-    local.latitude = [NSNumber numberWithDouble:coord.latitude];
-    local.longitude = [NSNumber numberWithDouble:coord.longitude];
+    NSLog(@"antes");
+    NSString *latitude = [NSString stringWithFormat:@"%f", coord.latitude];
+    NSString *longitude = [NSString stringWithFormat:@"%f", coord.longitude];
+//    NSLog(@"Longitude %@ %@", local.longitude, local.latitude);
     MKPointAnnotation *currentAnnotation = view.annotation;
-    local.title = currentAnnotation.title;
-    
-    [[MMLocalStore sharedStore] createLocalWithLatitude:local.latitude andLongitude:local.longitude andTitle:local.title andTipo:@"null"];
-    [[MMLocalStore sharedStore] saveChanges];
+    Local *local = [[MMLocalStore sharedStore] createLocalWithLatitude:latitude andLongitude:longitude andTitle:currentAnnotation.title andTipo:@"bla"];
+//    NSLog(@"local title: %@ current: %@", local.title, currentAnnotation.title);
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
+{
+    [self.fetchedResultsController performFetch:nil];
 }
 
 - (void)didReceiveMemoryWarning {
