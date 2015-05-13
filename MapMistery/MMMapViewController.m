@@ -21,6 +21,7 @@
 @property (nonatomic) MKLocalSearch *localSearch;
 @property (weak, nonatomic) IBOutlet MKMapView *map;
 @property (nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic) MKCoordinateRegion region;
 
 @end
 
@@ -39,6 +40,12 @@
     
     [self.locationManager startUpdatingLocation];
     
+    self.region = MKCoordinateRegionMakeWithDistance(self.locationManager.location.coordinate, 2000, 2000);
+    
+    [self.map setRegion:self.region animated:YES];
+    
+    [self.locationManager stopUpdatingLocation];
+    
 //    UIView *tab = [[UIView alloc] initWithFrame:CGRectMake(50, 50, 50, 50)];
 //    tab.backgroundColor = [UIColor redColor];
 //    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(5, 5, 30, 10)];
@@ -49,15 +56,7 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     
-    MKCoordinateRegion region;
-    
-    region = MKCoordinateRegionMakeWithDistance(self.locationManager.location.coordinate, 2000, 2000);
-    
-    [self.map setRegion:region animated:YES];
-    
-    [self.locationManager stopUpdatingLocation];
-    
-    self.localSearchRequest.region = region;
+    self.localSearchRequest.region = self.region;
     self.localSearchRequest.naturalLanguageQuery = @"Restaurante";
     
     self.localSearch = [[MKLocalSearch alloc] initWithRequest:self.localSearchRequest];

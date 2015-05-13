@@ -29,6 +29,7 @@
 		4E2ECAD51B029AE100125C93 /* MMPersonagemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAD41B029AE100125C93 /* MMPersonagemStore.m */; };
 		4E2ECAE11B038A4900125C93 /* MMCustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAE01B038A4900125C93 /* MMCustomAnnotationView.m */; };
 		4E2ECAE41B038D6600125C93 /* PersonagemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAE31B038D6600125C93 /* PersonagemViewController.m */; };
+		4E2ECAE71B03985900125C93 /* CasoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAE61B03985900125C93 /* CasoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		4E2ECAE01B038A4900125C93 /* MMCustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCustomAnnotationView.m; sourceTree = "<group>"; };
 		4E2ECAE21B038D6600125C93 /* PersonagemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonagemViewController.h; sourceTree = "<group>"; };
 		4E2ECAE31B038D6600125C93 /* PersonagemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonagemViewController.m; sourceTree = "<group>"; };
+		4E2ECAE51B03985900125C93 /* CasoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CasoViewController.h; sourceTree = "<group>"; };
+		4E2ECAE61B03985900125C93 /* CasoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CasoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +204,8 @@
 				4E2ECAC41B01E47C00125C93 /* MMTableViewSuspeitosViewController.m */,
 				4E2ECAE21B038D6600125C93 /* PersonagemViewController.h */,
 				4E2ECAE31B038D6600125C93 /* PersonagemViewController.m */,
+				4E2ECAE51B03985900125C93 /* CasoViewController.h */,
+				4E2ECAE61B03985900125C93 /* CasoViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 				4E2ECA7E1B018A1300125C93 /* ViewController.m in Sources */,
 				4E2ECAB91B01BA3400125C93 /* Caso.m in Sources */,
 				4E2ECAA81B019C1B00125C93 /* Personagem.m in Sources */,
+				4E2ECAE71B03985900125C93 /* CasoViewController.m in Sources */,
 				4E2ECA751B018A1300125C93 /* main.m in Sources */,
 				4E2ECAB51B01A8D600125C93 /* MMTableViewCasosViewController.m in Sources */,
 				4E2ECAC81B023EA000125C93 /* MMCustomAnnotation.m in Sources */,

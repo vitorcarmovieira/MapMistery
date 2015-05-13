@@ -104,6 +104,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="54U-2Y-DB3" kind="show" id="fQs-2n-c6V"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -117,12 +120,42 @@
                     <navigationItem key="navigationItem" id="iub-w4-4GZ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="tableview" destination="qCl-B8-fOW" id="j78-DC-gQE"/>
+                        <outlet property="tableview" destination="qCl-B8-fOW" id="Mcp-tl-vLa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="939-Vr-79K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2261.5" y="478.5"/>
+        </scene>
+        <!--Caso View Controller-->
+        <scene sceneID="6DD-aX-4CC">
+            <objects>
+                <viewController id="54U-2Y-DB3" customClass="CasoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nGz-uC-azk"/>
+                        <viewControllerLayoutGuide type="bottom" id="MkC-YQ-LMy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KND-SU-NPt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="21" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiC-BU-Acd">
+                                <rect key="frame" x="36" y="144" width="302" height="333"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="lbHistoriaCaso" destination="wiC-BU-Acd" id="4sz-On-JrY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UjS-sW-NQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2869.5" y="478.5"/>
         </scene>
         <!--Personagem View Controller-->
         <scene sceneID="wSx-E4-RZC">
@@ -161,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OgR-w9-j2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3259.5" y="476.5"/>
+            <point key="canvasLocation" x="3379.5" y="292.5"/>
         </scene>
         <!--Suspeitos-->
         <scene sceneID="Xuv-IP-l7A">
