@@ -18,5 +18,6 @@
 @property (nonatomic, retain) NSString * longitude;
 @property (nonatomic, retain) NSString * tipo;
 @property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSString * idPersonagem;
 
 @end

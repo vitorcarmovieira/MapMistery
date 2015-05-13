@@ -11,6 +11,8 @@
 #import "Local.h"
 #import "MMCustomAnnotation.h"
 #import "PersonagemViewController.h"
+#import "Personagem.h"
+#import "MMPersonagemStore.h"
 @import MapKit;
 @import CoreLocation;
 
@@ -120,7 +122,14 @@
     NSString *longitude = [NSString stringWithFormat:@"%f", coord.longitude];
 //    NSLog(@"Longitude %@ %@", local.longitude, local.latitude);
     MKPointAnnotation *currentAnnotation = view.annotation;
-    Local *local = [[MMLocalStore sharedStore] createLocalWithLatitude:latitude andLongitude:longitude andTitle:currentAnnotation.title andTipo:@"bla"];
+    
+    NSArray* array = [[[MMPersonagemStore sharedStore] fetchedResultsController] sections];
+    NSLog(@"array: %@", array);
+    if (arc4random_uniform([array count])) {
+        
+    }
+    
+    Local *local = [[MMLocalStore sharedStore] createLocalWithLatitude:latitude andLongitude:longitude andTitle:currentAnnotation.title andTipo:@"bla" andPersonagem:@""];
 //    NSLog(@"local title: %@ current: %@", local.title, currentAnnotation.title);
 }
 

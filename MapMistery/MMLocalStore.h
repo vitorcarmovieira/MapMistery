@@ -16,7 +16,7 @@
 
 + (instancetype)sharedStore;
 
-- (Local *)createLocalWithLatitude:(NSString*)latitude andLongitude:(NSString*)longitude andTitle:(NSString *)title andTipo:(NSString *)tipo;
+- (Local *)createLocalWithLatitude:(NSString*)latitude andLongitude:(NSString*)longitude andTitle:(NSString *)title andTipo:(NSString *)tipo andPersonagem:(NSString *)idPersonagem;
 
 - (BOOL)saveChanges;
 

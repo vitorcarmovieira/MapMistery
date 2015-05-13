@@ -17,5 +17,6 @@
 @dynamic longitude;
 @dynamic tipo;
 @dynamic title;
+@dynamic idPersonagem;
 
 @end

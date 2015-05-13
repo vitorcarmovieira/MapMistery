@@ -30,7 +30,7 @@ static NSString *DATA_MODEL_ENTITY_NAME = @"Caso";
         sharedStore = [[self alloc] initPrivate];
         sharedStore.managedObjectContext = appDelegate.managedObjectContext;
         
-//        [sharedStore resetStoredData];
+        [sharedStore resetStoredData];
     }
     
     return sharedStore;

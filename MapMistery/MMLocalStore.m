@@ -67,7 +67,7 @@ static NSString *DATA_MODEL_ENTITY_NAME = @"Local";
     // Populate with defaults
 }
 
-- (Local *)createLocalWithLatitude:(NSString*)latitude andLongitude:(NSString*)longitude andTitle:(NSString *)title andTipo:(NSString *)tipo
+- (Local *)createLocalWithLatitude:(NSString *)latitude andLongitude:(NSString *)longitude andTitle:(NSString *)title andTipo:(NSString *)tipo andPersonagem:(NSString *)idPersonagem
 {
     Local *local = [NSEntityDescription
                   insertNewObjectForEntityForName:DATA_MODEL_ENTITY_NAME
@@ -78,6 +78,7 @@ static NSString *DATA_MODEL_ENTITY_NAME = @"Local";
     local.title = title;
     local.latitude = latitude;
     local.longitude = longitude;
+    local.idPersonagem = idPersonagem;
     
     NSError *error;
     
