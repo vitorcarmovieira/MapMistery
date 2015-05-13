@@ -7,6 +7,7 @@
 //
 
 #import "MMCustomAnnotation.h"
+#import "MMCustomAnnotationView.h"
 
 @implementation MMCustomAnnotation
 
@@ -22,10 +23,10 @@
 
 - (MKAnnotationView *)annotationView{
     
-    MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:self
+    MMCustomAnnotationView *annotationView = [[MMCustomAnnotationView alloc] initWithAnnotation:self
                                                                     reuseIdentifier:@"CustomAnnotation"];
     annotationView.enabled = YES;
-    annotationView.canShowCallout = YES;
+    annotationView.canShowCallout = NO;
     annotationView.image = [UIImage imageNamed:@"teste.png"];
     annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];

@@ -124,6 +124,45 @@
             </objects>
             <point key="canvasLocation" x="2261.5" y="478.5"/>
         </scene>
+        <!--Personagem View Controller-->
+        <scene sceneID="wSx-E4-RZC">
+            <objects>
+                <viewController storyboardIdentifier="PersonagemViewController" id="Odx-8P-WsV" customClass="PersonagemViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mlo-DX-kX5"/>
+                        <viewControllerLayoutGuide type="bottom" id="6jM-h1-OhX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="58i-ay-CNj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CHU-7s-aGo">
+                                <rect key="frame" x="52" y="28" width="271" height="133"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome do personagem" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o18-Vk-6bj">
+                                <rect key="frame" x="101" y="169" width="172" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7t8-Ko-MME">
+                                <rect key="frame" x="172" y="617" width="30" height="30"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="voltar:" destination="Odx-8P-WsV" eventType="touchUpInside" id="fEX-hw-bc3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OgR-w9-j2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3259.5" y="476.5"/>
+        </scene>
         <!--Suspeitos-->
         <scene sceneID="Xuv-IP-l7A">
             <objects>
@@ -194,7 +233,7 @@
         <!--Mapa-->
         <scene sceneID="u7O-1a-Z5R">
             <objects>
-                <viewController id="4i6-0u-6aP" customClass="MMMapViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" id="4i6-0u-6aP" customClass="MMMapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="34S-2t-xLP"/>
                         <viewControllerLayoutGuide type="bottom" id="PpS-Fw-pRR"/>

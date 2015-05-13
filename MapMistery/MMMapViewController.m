@@ -10,6 +10,7 @@
 #import "MMLocalStore.h"
 #import "Local.h"
 #import "MMCustomAnnotation.h"
+#import "PersonagemViewController.h"
 @import MapKit;
 @import CoreLocation;
 
@@ -89,6 +90,7 @@
         if (annotationView == nil) {
             
             annotationView = customAnnotation.annotationView;
+            [annotationView setCanShowCallout:YES];
         } else {
             
             annotationView.annotation = annotation;
@@ -99,6 +101,12 @@
         
         return nil;
     }
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
+    
+    PersonagemViewController *personagemViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PersonagemViewController"];
+    [self presentViewController:personagemViewController animated:YES completion:nil];
 }
 
 - (NSFetchedResultsController *)fetchedResultsController {

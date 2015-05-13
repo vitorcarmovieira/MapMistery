@@ -27,6 +27,8 @@
 		4E2ECACC1B024DBF00125C93 /* teste.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E2ECACB1B024DBF00125C93 /* teste.png */; };
 		4E2ECACF1B027C9D00125C93 /* Local.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECACE1B027C9D00125C93 /* Local.m */; };
 		4E2ECAD51B029AE100125C93 /* MMPersonagemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAD41B029AE100125C93 /* MMPersonagemStore.m */; };
+		4E2ECAE11B038A4900125C93 /* MMCustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAE01B038A4900125C93 /* MMCustomAnnotationView.m */; };
+		4E2ECAE41B038D6600125C93 /* PersonagemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECAE31B038D6600125C93 /* PersonagemViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,10 @@
 		4E2ECACE1B027C9D00125C93 /* Local.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Local.m; sourceTree = "<group>"; };
 		4E2ECAD31B029AE100125C93 /* MMPersonagemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPersonagemStore.h; sourceTree = "<group>"; };
 		4E2ECAD41B029AE100125C93 /* MMPersonagemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMPersonagemStore.m; sourceTree = "<group>"; };
+		4E2ECADF1B038A4900125C93 /* MMCustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCustomAnnotationView.h; sourceTree = "<group>"; };
+		4E2ECAE01B038A4900125C93 /* MMCustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCustomAnnotationView.m; sourceTree = "<group>"; };
+		4E2ECAE21B038D6600125C93 /* PersonagemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonagemViewController.h; sourceTree = "<group>"; };
+		4E2ECAE31B038D6600125C93 /* PersonagemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonagemViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,8 @@
 		4E2ECA711B018A1300125C93 /* MapMistery */ = {
 			isa = PBXGroup;
 			children = (
+				4E2ECADF1B038A4900125C93 /* MMCustomAnnotationView.h */,
+				4E2ECAE01B038A4900125C93 /* MMCustomAnnotationView.m */,
 				4E2ECAC61B023EA000125C93 /* MMCustomAnnotation.h */,
 				4E2ECAC71B023EA000125C93 /* MMCustomAnnotation.m */,
 				4E2ECAB61B01A8FD00125C93 /* Controller */,
@@ -191,6 +199,8 @@
 				4E2ECAB41B01A8D600125C93 /* MMTableViewCasosViewController.m */,
 				4E2ECAC31B01E47C00125C93 /* MMTableViewSuspeitosViewController.h */,
 				4E2ECAC41B01E47C00125C93 /* MMTableViewSuspeitosViewController.m */,
+				4E2ECAE21B038D6600125C93 /* PersonagemViewController.h */,
+				4E2ECAE31B038D6600125C93 /* PersonagemViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -301,6 +311,7 @@
 				4E2ECAC51B01E47C00125C93 /* MMTableViewSuspeitosViewController.m in Sources */,
 				4E2ECA9F1B01926D00125C93 /* MMMapViewController.m in Sources */,
 				4E2ECAD51B029AE100125C93 /* MMPersonagemStore.m in Sources */,
+				4E2ECAE41B038D6600125C93 /* PersonagemViewController.m in Sources */,
 				4E2ECA7E1B018A1300125C93 /* ViewController.m in Sources */,
 				4E2ECAB91B01BA3400125C93 /* Caso.m in Sources */,
 				4E2ECAA81B019C1B00125C93 /* Personagem.m in Sources */,
@@ -310,6 +321,7 @@
 				4E2ECABC1B01C99000125C93 /* MMLocalStore.m in Sources */,
 				4E2ECACF1B027C9D00125C93 /* Local.m in Sources */,
 				4E2ECAB21B01A2C700125C93 /* MMCasoStore.m in Sources */,
+				4E2ECAE11B038A4900125C93 /* MMCustomAnnotationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
