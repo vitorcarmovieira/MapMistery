@@ -18,8 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"%@", self.nomeCaso);
-    [[self navigationController] setTitle:self.nomeCaso];
+    self.title = self.nomeCaso;
     self.lbHistoriaCaso.text = self.historiaCaso;
+    
+//    self.lbHistoriaCaso.backgroundColor = [UIColor blackColor];
+//    self.lbHistoriaCaso.textColor = [UIColor whiteColor];
+//    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background-60"]];
+    [self.view sizeToFit];
 }
 
 - (void)didReceiveMemoryWarning {

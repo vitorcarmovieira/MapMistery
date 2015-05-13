@@ -22,12 +22,12 @@
 }
 
 - (MKAnnotationView *)annotationView{
-    
+    NSArray *array = @[@"teste.png", @"MapMystery-23", @"MapMystery-23", @"MapMystery-23"];
     MMCustomAnnotationView *annotationView = [[MMCustomAnnotationView alloc] initWithAnnotation:self
                                                                     reuseIdentifier:@"CustomAnnotation"];
     annotationView.enabled = YES;
     annotationView.canShowCallout = NO;
-    annotationView.image = [UIImage imageNamed:@"teste.png"];
+    annotationView.image = [UIImage imageNamed:[array objectAtIndex:arc4random_uniform(4)]];
     annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
     imageView.image = [UIImage imageNamed:@"teste.png"];

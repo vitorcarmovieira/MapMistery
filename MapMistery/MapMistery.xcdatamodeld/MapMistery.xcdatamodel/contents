@@ -17,7 +17,7 @@
     </entity>
     <entity name="Personagem" representedClassName="Personagem" syncable="YES">
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="image" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Transformable" valueTransformerName="MMImageTransformer" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pista" optional="YES" attributeType="String" syncable="YES"/>
     </entity>

@@ -29,7 +29,7 @@ static NSString *DATA_MODEL_ENTITY_NAME = @"Personagem";
         sharedStore = [[self alloc] initPrivate];
         sharedStore.managedObjectContext = appDelegate.managedObjectContext;
         
-        //        [sharedStore resetStoredData];
+//                [sharedStore resetStoredData];
     }
     
     return sharedStore;
@@ -64,10 +64,10 @@ static NSString *DATA_MODEL_ENTITY_NAME = @"Personagem";
     }
     
     // Populate with defaults
-    [self createPersonagemWithNome:@"Maria Joaquina" andPista:@"Eu vi quem matou aquele velho!"];
+//    [self createPersonagemWithNome:@"Maria Joaquina" andPista:@"Eu vi quem matou aquele velho!"];
 }
 
-- (Personagem *)createPersonagemWithNome:(NSString *)nome andPista:(NSString *)pista{
+- (Personagem *)createPersonagemWithNome:(NSString *)nome andPista:(NSString *)pista andImage:(UIImage *)image{
     
     Personagem *personagem = [NSEntityDescription
                   insertNewObjectForEntityForName:DATA_MODEL_ENTITY_NAME
@@ -76,6 +76,7 @@ static NSString *DATA_MODEL_ENTITY_NAME = @"Personagem";
     personagem.id = [[[NSUUID alloc] init] UUIDString];
     personagem.nome = nome;
     personagem.pista = pista;
+    personagem.image = image;
     
     NSError *error;
     

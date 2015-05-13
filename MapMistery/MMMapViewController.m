@@ -16,7 +16,7 @@
 @import MapKit;
 @import CoreLocation;
 
-@interface MMMapViewController () <MKMapViewDelegate, NSFetchedResultsControllerDelegate>
+@interface MMMapViewController () <MKMapViewDelegate, NSFetchedResultsControllerDelegate, NSFetchedResultsControllerDelegate>
 
 @property (nonatomic) CLLocationManager *locationManager;
 @property (nonatomic) MKLocalSearchRequest *localSearchRequest;
@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet MKMapView *map;
 @property (nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic) MKCoordinateRegion region;
+@property (nonatomic) NSArray *personagens;
 
 @end
 
@@ -122,12 +123,6 @@
     NSString *longitude = [NSString stringWithFormat:@"%f", coord.longitude];
 //    NSLog(@"Longitude %@ %@", local.longitude, local.latitude);
     MKPointAnnotation *currentAnnotation = view.annotation;
-    
-    NSArray* array = [[[MMPersonagemStore sharedStore] fetchedResultsController] sections];
-    NSLog(@"array: %@", array);
-    if (arc4random_uniform([array count])) {
-        
-    }
     
     Local *local = [[MMLocalStore sharedStore] createLocalWithLatitude:latitude andLongitude:longitude andTitle:currentAnnotation.title andTipo:@"bla" andPersonagem:@""];
 //    NSLog(@"local title: %@ current: %@", local.title, currentAnnotation.title);

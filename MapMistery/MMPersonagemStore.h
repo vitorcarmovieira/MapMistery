@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Personagem.h"
+@import UIKit;
 @import CoreData;
 
 @interface MMPersonagemStore : NSObject
@@ -16,7 +17,7 @@
 
 + (instancetype)sharedStore;
 
-- (Personagem *)createPersonagemWithNome:(NSString *)nome andPista:(NSString *)pista;
+- (Personagem *)createPersonagemWithNome:(NSString *)nome andPista:(NSString *)pista andImage:(UIImage *)image;
 
 - (BOOL)saveChanges;
 

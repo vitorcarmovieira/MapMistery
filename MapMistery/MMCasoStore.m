@@ -65,7 +65,7 @@ static NSString *DATA_MODEL_ENTITY_NAME = @"Caso";
     }
     
     // Populate with defaults
-    [self createCasoWithNome:@"Nome do caso" andHistoria:@"HISTORIA" andCriminoso:@"Nome do Criminoso"];
+    [self createCasoWithNome:@"The Unholy Man" andHistoria:@" A strange preacher had come to town, a large morocco-bound Bible under his arm. Scotland Yard is puzzled when the preacher is found stabbed to death in his balcony seat at the Playhouse during a performance of Hamlet. Duchess Tallcourt, who accompanied the victim to the Playhouse, discovered the body upon returning from the powder room after intermission.The preacher's Bible was gone; and on the floor neait)y were a German-made cigarette and a packet of aspirin. It was common knowledge that the Duchess, previously a benefactor of the Bishop of Whittenfroth, had come to support the new preacher's views. This greatly angered the Bishop and Duke Tallcourt." andCriminoso:@"Nome do Criminoso"];
 }
 
 - (Caso *)createCasoWithNome:(NSString *)nome andHistoria:(NSString *)historia andCriminoso:(NSString *)criminoso

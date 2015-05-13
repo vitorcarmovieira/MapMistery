@@ -35,7 +35,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    NSLog(@"index: %@", indexPath);
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CasoCell"];
     Caso *caso = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
